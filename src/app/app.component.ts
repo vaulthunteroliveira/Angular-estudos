@@ -10,7 +10,7 @@ import { UserDTO } from 'src/models/user.dto';
 export class AppComponent {
   title = 'my-app';
 
-  listUsers: UserDTO; 
+  listUsers: UserDTO;
 
   constructor(
     public service: UserService
@@ -19,15 +19,17 @@ export class AppComponent {
     //service.findAll().subscribe(this.getUserList)
 
     // ou
-    
+
     //esse trecho faz o mesmo que o anterior, porém com uma função anonima.
-    service.findAll().subscribe(response => {
-      this.listUsers = response.data;
+    service.findAll().subscribe(res => {
+      this.listUsers = res.data;
       console.log(this.listUsers);
+    }, error =>{
+
     })
   }
 
-  getUserList(response) {
-    console.log(response)
-  }
+  // getUserList(response) {
+  //   console.log(response)
+  // }
 }
