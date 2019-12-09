@@ -14,7 +14,7 @@
 
 
 <ul>
-    <li *ngFor="let user of listUsers; let i = index" >
+    <li *ngFor="let user of obj.data; let i = index" >
         <div style="display: table-row">
             <div style="display: table-cell; background-color: aqua; padding: 10px;">
                 <img src="{{user.avatar}}" alt="avatar" onerror="this.onerror=null;this.src='https://www.w3schools.com/howto/img_avatar.png'"/>

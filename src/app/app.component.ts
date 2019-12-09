@@ -10,26 +10,17 @@ import { UserDTO } from 'src/models/user.dto';
 export class AppComponent {
   title = 'my-app';
 
-  listUsers: UserDTO;
+  obj: Object;
 
   constructor(
     public service: UserService
   ) {
-    //esse trecho de código recebe uma função, getUserList, como parametro.
-    //service.findAll().subscribe(this.getUserList)
 
-    // ou
-
-    //esse trecho faz o mesmo que o anterior, porém com uma função anonima.
     service.findAll().subscribe(res => {
-      this.listUsers = res.data;
-      console.log(this.listUsers);
+      this.obj = res;
+      console.log(this.obj)
     }, error =>{
 
     })
   }
-
-  // getUserList(response) {
-  //   console.log(response)
-  // }
 }
