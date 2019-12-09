@@ -15,5 +15,8 @@ export class UserService {
         return this.http.get<UserDTO[]>(`https://reqres.in/api/users`)
     }
 
+    getUserById(id: string): Observable<UserDTO>{
+        return this.http.get<UserDTO>(`https://reqres.in/api/users/${id}`)
+    }
 
 }

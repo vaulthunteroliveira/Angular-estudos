@@ -23,4 +23,11 @@ export class AppComponent {
 
     })
   }
+
+  teste(id){
+    this.service.getUserById(id).subscribe(res =>{
+      console.log(res)
+    }, 
+    error => {})
+  }
 }
