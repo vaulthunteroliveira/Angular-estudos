@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { HttpClient } from 'selenium-webdriver/http';
 import { from } from 'rxjs';
 import { UserService } from 'src/services/user.services';
+import { FormularioComponent } from './formulario/formulario.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
