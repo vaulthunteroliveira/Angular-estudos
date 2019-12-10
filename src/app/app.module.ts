@@ -7,6 +7,7 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { from } from 'rxjs';
 import { UserService } from 'src/services/user.services';
 import { FormularioComponent } from './formulario/formulario.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormularioComponent } from './formulario/formulario.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     UserService
