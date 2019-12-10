@@ -1,0 +1,23 @@
+<form #userForm="ngForm" (ngSubmit)="salvar(userForm)">
+    <div class="form-group">
+        <div class="form-control-label">Nome</div>
+        <input type="text" class="form-control" name="first_name" ngModel />
+    </div>
+    <div class="form-group">
+        <div class="form-control-label">Sobrenome</div>
+        <input type="text" class="form-control" name="last_name" ngModel />
+    </div>
+    <div class="form-group">
+        <div class="form-control-label">E-mail</div>
+        <input type="text" class="form-control" name="email" ngModel />
+    </div>
+    <button type="submit" class="btn btn-primary">salvar</button>
+</form>
+
+
+<!-- 
+id: string,
+email: string,
+first_name: string,
+last_name: string,
+avatar: string -->
