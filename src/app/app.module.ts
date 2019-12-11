@@ -8,11 +8,13 @@ import { from } from 'rxjs';
 import { UserService } from 'src/services/user.services';
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormularioComponent
+    FormularioComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule,

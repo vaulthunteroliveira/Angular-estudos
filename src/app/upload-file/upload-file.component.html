@@ -1,0 +1,9 @@
+<div class="custom-file">
+    <input type="file" class="custom-file-input" id="customFile" (change)="onChange($event)" multiple>
+    <label class="custom-file-label" for="customFile" id="customFileLabel">Selecionar arquivo</label>
+</div>
+
+<div >
+    <button type="button" class="btn btn-warning btn-sm mt-2" (click)="onUpload()"
+    [disabled]="!files">enviar arquivo</button>
+</div>
