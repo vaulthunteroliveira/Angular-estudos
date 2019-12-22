@@ -38,7 +38,7 @@ export class UploadFileComponent implements OnInit {
 
   onUpload(){
     if(this.files && this.files.size > 0){
-      this.uploadService.upload(this.files, 'http://localhost:8000/uploads')
+      this.uploadService.upload(this.files, 'http://localhost:8080/upload')
       .subscribe(response => console.log('upload concluido'), error => console.log(error))
     }
   }
